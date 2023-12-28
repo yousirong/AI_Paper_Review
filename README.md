@@ -379,6 +379,14 @@ AI 논문 정리
 
 - [SlowFast Networks for Video Recognition(2018)](https://deep-learning-study.tistory.com/765), paper [[pdf](https://arxiv.org/abs/1812.03982)]
 
+- [STA-CNN: Convolutional Spatial-Temporal Attention Learning for Action Recognition](https://ieeexplore.ieee.org/abstract/document/9058999?casa_token=t5IrgS4Ik0cAAAAA:Zb0vp9DXrDPRGfB4C9T-3S9K65IA6KdO7s94Sf-ycEfd2p4iTvqpWsS-qh0UModvS7SkW_C9vg)
+  
+- [MS-TCN++: Multi-Stage Temporal Convolutional Network for Action Segmentation](https://ieeexplore.ieee.org/abstract/document/9186840?casa_token=Yu7SyGrRwF4AAAAA:yhrFDLKvSATn_ah1uduRh8EqOPn-2PrLqkej5WO9vHPzacXE5FfoA68HZWVEFS-d8LC8W9MgKA)
+
+- [STA-TSN: Spatial-Temporal Attention Temporal Segment Network for action recognition in video](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265115)
+
+- [TSN(2016)](https://github.com/open-mmlab/mmaction2/blob/main/configs/recognition/tsn/README.md), paper[[pdf](https://arxiv.org/abs/1608.00859)] 
+
 - [TSM(2018)](https://deep-learning-study.tistory.com/772), paper [[pdf](https://arxiv.org/abs/1811.08383)]
 
 - [GCNet(2019)](https://deep-learning-study.tistory.com/780), paper [[pdf](https://arxiv.org/abs/1904.11492)]
