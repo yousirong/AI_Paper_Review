@@ -88,7 +88,7 @@ AI 논문 정리
 
 - [Knowledge distillation: A good teacher is patient and consitent(2021)](https://deep-learning-study.tistory.com/701), paper [[pdf](https://arxiv.org/abs/2106.05237)]
 
-- [MLP-Mixer(2021)](https://deep-learning-study.tistory.com/720), paper [[odf](https://arxiv.org/pdf/2105.01601.pdf)]
+- [MLP-Mixer(2021)](https://deep-learning-study.tistory.com/720), paper [[pdf](https://arxiv.org/pdf/2105.01601.pdf)]
 
 - [CvT(2021)](https://deep-learning-study.tistory.com/816), paper [[pdf](https://arxiv.org/abs/2103.15808)]
 
