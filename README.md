@@ -401,7 +401,7 @@ AI 논문 정리
 
 ## Video Recognition - Frame-based Models 
 
-- [TSM(2018)](https://www.notion.so/Temporal-Shift-Module-TSM-80418b91bde04305837e08e430b8e2bd), paper [[pdf](https://arxiv.org/abs/1811.08383)]
+- [TSM: Temporal Shift Module(2018)](https://www.notion.so/Temporal-Shift-Module-TSM-80418b91bde04305837e08e430b8e2bd), paper [[pdf](https://arxiv.org/abs/1811.08383)]
 
 - [TRN: Temporal Relational Reasoning in Videos(2018)](https://www.notion.so/Temporal-Relation-Network-TRN-eea3f311b48b4aeea73d37d0e3f8f795), paper [[pdf](https://arxiv.org/abs/1711.08496)]
 
