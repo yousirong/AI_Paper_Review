@@ -607,11 +607,11 @@ nlp
 
 ### Diffusion Model based Anomaly Detection
 
-- [Anoddpm: Anomaly detection with denoising diffusion probabilistic models using simplex noise(2022)], paper [[pdf]()]
+- [Anoddpm: Anomaly detection with denoising diffusion probabilistic models using simplex noise(2022)], paper [[pdf](https://openaccess.thecvf.com/content/CVPR2022W/NTIRE/papers/Wyatt_AnoDDPM_Anomaly_Detection_With_Denoising_Diffusion_Probabilistic_Models_Using_Simplex_CVPRW_2022_paper.pdf)]
 
-- [Unsupervised surface anomaly detection with diffusion probabilistic model(2023)], paper [[pdf]()]
+- [Unsupervised surface anomaly detection with diffusion probabilistic model(2023)], paper [[pdf](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_Unsupervised_Surface_Anomaly_Detection_with_Diffusion_Probabilistic_Model_ICCV_2023_paper.pdf)]
 
-- [Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection(2023)], paper [[pdf]()]
+- [Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection(2023)], paper [[pdf](https://openaccess.thecvf.com/content/ICCV2023/papers/Flaborea_Multimodal_Motion_Conditioned_Diffusion_Model_for_Skeleton-based_Video_Anomaly_Detection_ICCV_2023_paper.pdf)]
 
   
 ## Active Learning
