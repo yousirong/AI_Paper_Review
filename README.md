@@ -603,7 +603,7 @@ nlp
 - PyTorch 구현 코드로 살펴보는 [Pix2Pix(2016)](https://deep-learning-study.tistory.com/645), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/GAN/DCGAN(2015).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/643)], paper [[pdf](https://arxiv.org/abs/1611.07004)]
 
 ### Diffusion Model
--
+- PyTorch 구현 코드로 살펴보는 [Implementation of Denoising Diffusion Probabilistic Model in Pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch?tab=readme-ov-file), PyTorch Code [[Google Colab]()
 
 ### Diffusion Model based Anomaly Detection
 
