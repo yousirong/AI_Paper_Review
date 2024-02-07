@@ -602,7 +602,18 @@ nlp
 
 - PyTorch 구현 코드로 살펴보는 [Pix2Pix(2016)](https://deep-learning-study.tistory.com/645), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/GAN/DCGAN(2015).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/643)], paper [[pdf](https://arxiv.org/abs/1611.07004)]
 
+### Diffusion Model
+-
 
+### Diffusion Model based Anomaly Detection
+
+- [Anoddpm: Anomaly detection with denoising diffusion probabilistic models using simplex noise(2022)], paper [[pdf]()]
+
+- [Unsupervised surface anomaly detection with diffusion probabilistic model(2023)], paper [[pdf]()]
+
+- [Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection(2023)], paper [[pdf]()]
+
+  
 ## Active Learning
 - [Towards Reducing Labeling Cost in Deep Object Detection(2021)](https://deep-learning-study.tistory.com/732), paper [[pdf](https://arxiv.org/abs/2106.11921)]
 
