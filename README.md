@@ -6,11 +6,33 @@ AI 논문 정리
 
 ## Diffusion Model Contents
 - [Classification](#classification)
-- [Resources](#resources)
+- [Object Detection](#object-detection)
+- [Segmentation](#segmentation)
+- [Self-supervised Learning](#self-supervised-learning)
+- [Video SSL](#video-ssl)
+- [Semi-supervised Learning](#semi-supervised-learning)
+- [Weakly](#weakly)
+- [Video Recognition](#video-recognition)
+- [Video Recognition - Two Stream CNNs](#video-recognition-two-stream-cnns)
+- [Video Recognition - Frame-based Models](#video-recognition-frame-based-models)
+- [Video Recognition - Transformer](#video-recognition-transformer)
+- [Video Segmentation](#video-segmentation)
+- [Zero Shot Classification](#zero-shot-classification)
+- [Zero Shot Detection](#zero-shot-detection)
+- [Zero Shot Segmentation](#zero-shot-segmentation)
+- [Few-Shot, Meta Learning](#few-shot,meta-learning)
+- [Prompting and Vision-Language Model](#prompting-and-vision-language-model)
+- [Image Processing](#image-processing)
+- [3D Vision](#3d-vision)
+- [NLP](#nlp)
+- [GAN](#gan)
+- [Diffusion Model](#diffusion-model)
+- [Diffusion Model based Anomaly Detection](#diffusion-model-based-anomaly-detection)
+- [Diffusion Resources](#diffusion-resources)
   - [Introductory Posts](#introductory-posts)
   - [Introductory Papers](#introductory-papers)
   - [Introductory Videos](#introductory-videos)
-- [Papers](#papers)
+- [Diffusion Papers](#papers)
   - [Must-read papers](#must-read-papers)
   - [Personalized](#personalized)
   - [Stable diffusion freeze](#stable-diffusion-freeze)
@@ -26,6 +48,17 @@ AI 논문 정리
   - [3D](#3d)
   - [수학기반향상](#수학기반향상)
   - [기타](#기타)
+- [Active Learning](#active-learning)
+- [Pose estimation](#pose-estimation)
+- [Long Tail](#long-tail)
+- [Face Recognition](#face-recognition)
+- [Model Compression](#model-compression)
+- [Activation Function](#activation-function)
+- [Augmentation](#augmentation)
+- [Style Transfer](#style-transfer)
+- [Regularization](#regularization)
+- [Normalization](#normalization)
+- [Optimization](#optimization)
 
 
 
@@ -389,7 +422,7 @@ AI 논문 정리
 - [CaSP(2021), Class-agnostic Semi-Supervised Pretraining for Detection & Segmentation](https://deep-learning-study.tistory.com/960), paper [[pdf](https://arxiv.org/abs/2112.04966)]
 
 
-## weakly
+## Weakly
 - [Class Activation Map(CAM), Learning Deep Features for Discriminative Localization](https://deep-learning-study.tistory.com/954), paper [[pdf](https://arxiv.org/abs/1512.04150)]
 
 - [Grad-CAM, Visual Explanations from Deep Networks via Gradient based Localization](https://deep-learning-study.tistory.com/955), paper [[pdf](https://arxiv.org/abs/1610.02391)]
@@ -645,7 +678,7 @@ nlp
 
     
   
-# Resources
+# Diffusion Resources
 ## Introductory Posts
 
 **What are Diffusion Models?** \
@@ -679,7 +712,7 @@ arXiv 2022. [[Paper](https://arxiv.org/abs/2209.00796)] \
 Survey.
 
 
-# Papers
+# Diffusion Papers
 
 
 ## Must-read papers
@@ -1280,7 +1313,7 @@ blur써 Sota (안읽음)
 ## Pose estimation
 - [Hourglass(2016)](https://deep-learning-study.tistory.com/617)
 
-## long tail
+## Long Tail
 - [Class-Balanced Loss(2019)](https://deep-learning-study.tistory.com/671), paper [[pdf](https://arxiv.org/pdf/1901.05555.pdf)]
 
 - [Seesaw Loss for Long-Tailed Instance Segmentation(2020)](https://deep-learning-study.tistory.com/902), paper [[pdf](https://arxiv.org/abs/2008.10032)]
