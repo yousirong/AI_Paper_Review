@@ -1,6 +1,33 @@
 # Paper Reading
 AI 논문 정리
 
+</details>
+
+
+## Diffusion Model Contents
+- [Resources](#resources)
+  - [Introductory Posts](#introductory-posts)
+  - [Introductory Papers](#introductory-papers)
+  - [Introductory Videos](#introductory-videos)
+- [Papers](#papers)
+  - [Must-read papers](#must-read-papers)
+  - [Personalized](#personalized)
+  - [Stable diffusion freeze](#stable-diffusion-freeze)
+  - [Stable diffusion finetuning](#stable-diffusion-finetuning)
+  - [Connection with other framworks](#connection-with-other-framworks)
+  - [Image Generation](#image-generation)
+  - [Image space guidance sampling](#image-space-guidance-sampling)
+  - [Classifier guidance sampling](#classifier-guidance-sampling)
+  - [Image Editing](#image-editing)
+  - [Text-focused](#text-focused)
+  - [Fast Sampling](#fast-sampling)
+  - [Video Generation and Editing](#video-generation-and-editing)
+  - [3D](#3d)
+  - [수학기반향상](#수학기반향상)
+  - [기타](#기타)
+
+
+
 ---
 
 ## Classification
@@ -614,30 +641,7 @@ nlp
 - [Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection(2023)], paper [[pdf](https://openaccess.thecvf.com/content/ICCV2023/papers/Flaborea_Multimodal_Motion_Conditioned_Diffusion_Model_for_Skeleton-based_Video_Anomaly_Detection_ICCV_2023_paper.pdf)]
 
 
-</details>
 
-
-## Diffusion Model Contents
-- [Resources](#resources)
-  - [Introductory Posts](#introductory-posts)
-  - [Introductory Papers](#introductory-papers)
-  - [Introductory Videos](#introductory-videos)
-- [Papers](#papers)
-  - [Must-read papers](#must-read-papers)
-  - [Personalized](#personalized)
-  - [Stable diffusion freeze](#stable-diffusion-freeze)
-  - [Stable diffusion finetuning](#stable-diffusion-finetuning)
-  - [Connection with other framworks](#connection-with-other-framworks)
-  - [Image Generation](#image-generation)
-  - [Image space guidance sampling](#image-space-guidance-sampling)
-  - [Classifier guidance sampling](#classifier-guidance-sampling)
-  - [Image Editing](#image-editing)
-  - [Text-focused](#text-focused)
-  - [Fast Sampling](#fast-sampling)
-  - [Video Generation and Editing](#video-generation-and-editing)
-  - [3D](#3d)
-  - [수학기반향상](#수학기반향상)
-  - [기타](#기타)
     
   
 # Resources
