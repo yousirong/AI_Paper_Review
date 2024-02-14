@@ -4,7 +4,7 @@ AI 논문 정리
 </details>
 
 
-## Diffusion Model Contents
+## Contents
 - [Classification](#classification)
 - [Object Detection](#object-detection)
 - [Segmentation](#segmentation)
