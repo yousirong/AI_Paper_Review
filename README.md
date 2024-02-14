@@ -617,7 +617,7 @@ nlp
 </details>
 
 
-## Contents
+## Diffusion Model Contents
 - [Resources](#resources)
   - [Introductory Posts](#introductory-posts)
   - [Introductory Papers](#introductory-papers)
