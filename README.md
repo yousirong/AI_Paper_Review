@@ -5,6 +5,7 @@ AI 논문 정리
 
 
 ## Diffusion Model Contents
+- [Classification](#classification)
 - [Resources](#resources)
   - [Introductory Posts](#introductory-posts)
   - [Introductory Papers](#introductory-papers)
