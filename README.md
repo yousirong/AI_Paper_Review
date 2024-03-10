@@ -32,7 +32,7 @@ AI 논문 정리
   - [Introductory Posts](#introductory-posts)
   - [Introductory Papers](#introductory-papers)
   - [Introductory Videos](#introductory-videos)
-- [Diffusion Papers](#papers)
+- [Diffusion Papers](#diffusion-papers)
   - [Diffusion Models A Comprehensive Survey of Methods and Applications](#diffusion-models-a-comprehensive-survey-of-methods-and-applications)  
   - [Must-read papers](#must-read-papers)
   - [Personalized](#personalized)
