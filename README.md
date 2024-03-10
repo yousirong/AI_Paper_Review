@@ -721,7 +721,8 @@ Survey.
 **Diffusion Models A Comprehensive Survey of Methods and Applications** \
 *Ling Yang, Zhilong Zhang, Yang Song, Shenda Hong, Runsheng Xu, Yue Zhao, Wentao Zhang, Bin Cui, Ming-Hsuan Yang* \
 [[paper](https://arxiv.org/abs/2209.00796)] 
-[[Github]([https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models](https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy?tab=readme-ov-file)] 6 Feb 2024 \
+[[Github](https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy?tab=readme-ov-file)] \
+6 Feb 2024 \
 교수님 추천 논문
 
 **Deep Unsupervised Learning using Nonequilibrium Thermodynamics** \
