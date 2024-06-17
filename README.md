@@ -937,7 +937,7 @@ high resolution 에서는 같은 SNR 에서도 이미지가 덜 망가지는 것
   
 ## Diffusion Transformer
 
-**Scalable Diffusion Models with Transformers** \
+**Scalable Diffusion Models with Transformers - DIT** \
 *William Peebles, Saining Xie* \
 arXiv 2022. [[Paper](https://arxiv.org/abs/2212.09748)] [[Project page](https://www.wpeebles.com/DiT)] [[Git](https://github.com/facebookresearch/DiT)]\
 [Submitted on 19 Dec 2022] \
