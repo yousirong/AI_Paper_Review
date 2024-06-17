@@ -49,6 +49,8 @@ AI 논문 정리
   - [3D](#3d)
   - [수학기반향상](#수학기반향상)
   - [기타](#기타)
+- [Diffusion Transformer](#diffusion-transformer)
+  - [Scalable Diffusion Models with Transformers](#scalable-diffusion-models-with-transformers)
 - [Active Learning](#active-learning)
 - [Pose estimation](#pose-estimation)
 - [Long Tail](#long-tail)
@@ -925,11 +927,7 @@ NeurIPS22. [[Paper](https://arxiv.org/abs/2205.13699)]\
 27 May 2022 \
 Normalizing flow의 invertible한 성질을 적용하여, data adatible 한 nonlinear diffusion process를 implicit하게 학습. FID 성능을 올림.\
 
-**Scalable Diffusion Models with Transformers** \
-*William Peebles, Saining Xie* \
-arXiv 2022. [[Paper](https://arxiv.org/abs/2212.09748)] [[Project page](https://www.wpeebles.com/DiT)] [[Git](https://github.com/facebookresearch/DiT)]\
-[Submitted on 19 Dec 2022] \
-트랜스포머를 사용해서 이미지넷에서 SOTA. 기본적으로 VAE의 latent 상에서의 Diffusion이며, t랑 class를 concat 해서 mlp 하나 태우고, adaLN 을 적용시킴. 약간 LDM을 transformer로 구현한 느낌. 실험 좋고 내용 간단한데 굳이 열심히 읽어볼 필요는 없는 논문. \
+
   
 **On the Importance of Noise Scheduling for Diffusion Models** \
 *Ting Chen* \
@@ -938,6 +936,16 @@ high resolution 에서는 같은 SNR 에서도 이미지가 덜 망가지는 것
 이미지가 클수록 정보가 살아남는 것으로부터 착안하여, signal 을 낮춰주는 $xt=\sqrt{\alpha} b x_0 + \sqrt{1 - \alpha} \epsilon 을 제안.\
 +) UNet backbone 이 아닙니다.
   
+## Diffusion Transformer
+
+**Scalable Diffusion Models with Transformers** \
+*William Peebles, Saining Xie* \
+arXiv 2022. [[Paper](https://arxiv.org/abs/2212.09748)] [[Project page](https://www.wpeebles.com/DiT)] [[Git](https://github.com/facebookresearch/DiT)]\
+[Submitted on 19 Dec 2022] \
+트랜스포머를 사용해서 이미지넷에서 SOTA. 기본적으로 VAE의 latent 상에서의 Diffusion이며, t랑 class를 concat 해서 mlp 하나 태우고, adaLN 을 적용시킴. 약간 LDM을 transformer로 구현한 느낌. 실험 좋고 내용 간단한데 굳이 열심히 읽어볼 필요는 없는 논문. \
+
+
+
 
 
 ## Connection with other framworks
@@ -954,7 +962,7 @@ arXiv 2022. [[Paper](https://arxiv.org/abs/2201.00308)] [[Github](https://github
 2 Jan 2022 \
 제대로 못읽었지만, VAE의 형태를 빌려와서 합친 논문.
 
-**High-Resolution Image Synthesis with Latent Diffusion Models** \
+**High-Resolution Image Synthesis with Latent Diffusion Models - LDM** \
 *Robin Rombach<sup>1</sup>, Andreas Blattmann<sup>1</sup>, Dominik Lorenz, Patrick Esser, Björn Ommer* \
 arXiv 2021. [[Paper](https://arxiv.org/abs/2112.10752)] [[Github](https://github.com/CompVis/latent-diffusion)] \
 20 Dec 2021 \
@@ -971,6 +979,12 @@ VAE랑 합친 논문. VAE와 Diffusion을 동시에 학습. Diffusion은 VAE의 
 ICLR 2022 (Spotlight). [[Paper](https://arxiv.org/abs/2112.07804)] [[Project](https://nvlabs.github.io/denoising-diffusion-gan)] \
 15 Dec 2021 \
 GAN으로 특정 timestep의 이미지를 생성하는 방법으로 샘플링도 빠르게, 퀄리티도 좋게 함. GAN+Diffusion.
+
+**Soft Diffusion: Score Matching for General Corruptions** \
+*Giannis Daras, Mauricio Delbracio, Hossein Talebi, Alexandros G. Dimakis, Peyman Milanfar* \
+arXiv 2022. [[Paper](https://arxiv.org/abs/2209.05442)] \
+12 Sep 2022 \
+blur써 Sota 
 
 ## Image space guidance sampling
 
@@ -992,7 +1006,7 @@ ICLR 2022. [[Paper](https://arxiv.org/abs/2108.01073)] [[Project](https://sde-im
 2 Aug 2021 \
 stroke를 노이즈를 적당히 씌웠다가 샘플링하면 비슷한 색의 real한 이미지를 얻을 수 있음.
 
-## Classifier guidance sampling
+## Classifier guidance sampling - diffusion tranformer 이해하기 위한 내용
 
 **Blended Diffusion for Text-driven Editing of Natural Images** \
 *Omri Avrahami, Dani Lischinski, Ohad Fried* \
@@ -1306,13 +1320,9 @@ arXiv 2023. [[Paper](https://arxiv.org/abs/2302.07400)]\
 
 
 
-## 읽을것들
 
-**Soft Diffusion: Score Matching for General Corruptions** \
-*Giannis Daras, Mauricio Delbracio, Hossein Talebi, Alexandros G. Dimakis, Peyman Milanfar* \
-arXiv 2022. [[Paper](https://arxiv.org/abs/2209.05442)] \
-12 Sep 2022 \
-blur써 Sota (안읽음)
+
+
 
   
 ## Active Learning
