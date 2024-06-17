@@ -744,7 +744,7 @@ ICLR 2021. [[Paper](https://arxiv.org/abs/2102.09672)] [[Github](https://github.
 18 Feb 2021 \
 사실 필수로 읽어야 하는 논문까지는 아님. 아키텍처의 변화와 스케줄링의 변화를 줌. 하지만 여기저기서 많이 등장하므로 읽어두면 좋음. 중요도는 그리 높지 않음.
 
-**Diffusion Models Beat GANs on Image Synthesis** \
+**Diffusion Models Beat GANs on Image Synthesis - CG** \
 *Prafulla Dhariwal<sup>1</sup>, Alex Nichol<sup>1</sup>* \
 arXiv 2021. [[Paper](https://arxiv.org/abs/2105.05233)] [[Github](https://github.com/openai/guided-diffusion)] \
 11 May 2021 \
@@ -780,7 +780,7 @@ arXiv 2022. [[Paper](https://arxiv.org/abs/2206.00364)] \
 1 Jun 2022 \
 실험적으로 Diffusion model을 어떻게 설계하는 것이 좋은지 잘 정리해놓은 논문.
 
-**Classifier-Free Diffusion Guidance** \
+**Classifier-Free Diffusion Guidance - CFG** \
 *Jonathan Ho, Tim Salimans* \
 NeurIPS Workshop 2021. [[Paper](https://arxiv.org/abs/2207.12598)] \
 28 Sep 2021 \
