@@ -941,9 +941,19 @@ high resolution 에서는 같은 SNR 에서도 이미지가 덜 망가지는 것
 *William Peebles, Saining Xie* \
 arXiv 2022. [[Paper](https://arxiv.org/abs/2212.09748)] [[Project page](https://www.wpeebles.com/DiT)] [[Git](https://github.com/facebookresearch/DiT)]\
 [Submitted on 19 Dec 2022] \
-트랜스포머를 사용해서 이미지넷에서 SOTA. 기본적으로 VAE의 latent 상에서의 Diffusion이며, t랑 class를 concat 해서 mlp 하나 태우고, adaLN 을 적용시킴. 약간 LDM을 transformer로 구현한 느낌. 실험 좋고 내용 간단한데 굳이 열심히 읽어볼 필요는 없는 논문. \
+트랜스포머를 사용해서 이미지넷에서 SOTA. 기본적으로 VAE의 latent 상에서의 Diffusion이며, t랑 class를 concat 해서 mlp 하나 태우고, adaLN 을 적용시킴. 약간 LDM을 transformer로 구현한 느낌. 실험 좋고 내용 간단한데 굳이 열심히 읽어볼 필요는 없는 논문.
+
+**Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models** \
+*Yixin Liu Kai Zhang Yuan Li Zhiling Yan Chujie Gao
+Ruoxi Chen Zhengqing Yuan Yue Huang Hanchi Sun
+Jianfeng Gao Lifang He1 Lichao Sun
+Lehigh University Microsoft Research* \
+Note: This is not an official technical report from OpenAI
+arxiv 2024 [[Paper](https://arxiv.org/pdf/2402.17177)] [[Git](https://github.com/lichao-sun/SoraReview)] \
 
 
+OpenAI가 2024년 2월 15일, 텍스트를 영상으로 만들어주는(Text-to-Video) 생성형 AI인 Sora를 발표한 이후 국내외를 막론하고 방송·영상 업계에서는 하나같이 기대감과 함께 위기감을 표하고 있다. 그리고 곧이어 이 서비스를 분석하고 전망한 전문가들의 칼럼이나 학술대회 발표가 이어지고 있다. OpenAI는 Sora를 공개하면서 이 서비스의 기술적 세부 사항에 대한 공식 연구 논문을 
+발표하지는 않았지만, 활용된 기술에 대한 개요와 일부 정성적 결과를 다룬 기술 문서(technical report) ‘Video generation models as world simulators’를 웹사이트에 발표했다1). 그리고 Sora 서비스를 일부 시각예술가, 디자이너, 영화제작 전문가들에게만 제한적으로 공개하여 서비스의 완성도를 테스트 중이고 연말에는 이 서비스를 대중에까지 이용할 수 있도록 하겠다고 발표했다. 그동안 OpenAI는 Sora 서비스에서 발생할 수 있는 부정확한 정보(misinformation), 혐오 콘텐츠(hateful content), 편향(bias)을 테스트할 레드 팀(red team)2)을 운영할 것이라고 밝혔다(OpenAI, 2024). 
 
 
 
