@@ -3,6 +3,81 @@ AI 논문 정리
 
 </details>
 
+# 딥러닝
+- [Classification](#classification)
+- [Object Detection](#object-detection)
+- [Segmentation](#segmentation)
+- [Self-supervised Learning](#self-supervised-learning)
+- [Video SSL](#video-ssl)
+- [Semi-supervised Learning](#semi-supervised-learning)
+- [Weakly](#weakly)
+- [Video Recognition](#video-recognition)
+  - [Video Recognition - Two Stream CNNs](#video-recognition-two-stream-cnns)
+  - [Video Recognition - Frame-based Models](#video-recognition-frame-based-models)
+  - [Video Recognition - Transformer](#video-recognition-transformer)
+- [Video Segmentation](#video-segmentation)
+- [Zero Shot Classification](#zero-shot-classification)
+- [Zero Shot Detection](#zero-shot-detection)
+- [Zero Shot Segmentation](#zero-shot-segmentation)
+- [Few-Shot, Meta Learning](#few-shotmeta-learning)
+- [Prompting and Vision-Language Model](#prompting-and-vision-language-model)
+- [Image Processing](#image-processing)
+- [3D Vision](#3d-vision)
+- [NLP](#nlp)
+- [Active Learning](#active-learning)
+- [Pose estimation](#pose-estimation)
+- [Long Tail](#long-tail)
+- [Face Recognition](#face-recognition)
+- [Model Compression](#model-compression)
+- [Activation Function](#activation-function)
+- [Augmentation](#augmentation)
+- [Style Transfer](#style-transfer)
+- [Regularization](#regularization)
+- [Normalization](#normalization)
+- [Optimization](#optimization)
+
+# 생성모델
+- [GAN](#gan)
+  - [Conditional GAN](#conditional-gan)
+- [Image generation(Non-GAN)](#non-gan)
+- [Text-guided Image Generation](#text-guided-image-generation)
+- [Diffusion Model](#diffusion-model)
+- [Diffusion Model based Anomaly Detection](#diffusion-model-based-anomaly-detection)
+- [Diffusion Resources](#diffusion-resources)
+  - [Introductory Posts](#introductory-posts)
+  - [Introductory Papers](#introductory-papers)
+  - [Introductory Videos](#introductory-videos)
+- [Diffusion Papers](#diffusion-papers)
+  - [Diffusion Models A Comprehensive Survey of Methods and Applications](#diffusion-models-a-comprehensive-survey-of-methods-and-applications)
+  - [Must-read papers](#must-read-papers)
+  - [Personalized](#personalized)
+  - [Stable diffusion freeze](#stable-diffusion-freeze)
+  - [Stable diffusion finetuning](#stable-diffusion-finetuning)
+  - [Diffusion Transformer](#diffusion-transformer)
+  - [Connection with other framworks](#connection-with-other-framworks)
+  - [Image Generation](#image-generation)
+  - [Image space guidance sampling](#image-space-guidance-sampling)
+  - [Classifier guidance sampling](#classifier-guidance-sampling)
+  - [Image Editing](#image-editing)
+  - [Text-focused](#text-focused)
+  - [Fast Sampling](#fast-sampling)
+  - [Video Generation and Editing](#video-generation-and-editing)
+  - [3D](#3d)
+  - [수학기반향상](#수학기반향상)
+  - [기타](#기타)
+- [Image Inpainting](#image-inpainting)
+  - [Non-GAN-based Inpainting](#non-gan-based-inpainting)
+  - [GAN-based Inpainting](#gan-based-inpainting)
+  - [Diffusion-based Inpainting](#diffusion-based-inpainting)
+- [Medical Imaging](#medical-imaging)
+  - [Diffusion-based Medical Image Generation](#diffusion-based-medical-image-generation)
+  - [Segmentation & Registration](#segmentation--registration)
+  - [Image-to-Image Translation](#image-to-image-translation)
+
+
+
+
+
 
 ## Contents
 - [Classification](#classification)
@@ -666,6 +741,56 @@ nlp
 - [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators(2020)](https://deep-learning-study.tistory.com/921), paper [[pdf](https://arxiv.org/abs/2003.10555)]
 
 - [ROFORMER: ENHANCED TRANSFORMER WITH ROTARY POSITION EMBEDDING(2023)] paper [[pdf](https://arxiv.org/pdf/2104.09864)]
+
+## Active Learning
+- [Towards Reducing Labeling Cost in Deep Object Detection(2021)](https://deep-learning-study.tistory.com/732), paper [[pdf](https://arxiv.org/abs/2106.11921)]
+
+## Pose estimation
+- [Hourglass(2016)](https://deep-learning-study.tistory.com/617)
+
+## Long Tail
+- [Class-Balanced Loss(2019)](https://deep-learning-study.tistory.com/671), paper [[pdf](https://arxiv.org/pdf/1901.05555.pdf)]
+
+- [Seesaw Loss for Long-Tailed Instance Segmentation(2020)](https://deep-learning-study.tistory.com/902), paper [[pdf](https://arxiv.org/abs/2008.10032)]
+
+
+## Face Recognition
+- Pytorch 구현 코드로 살펴보는 [FaceNet(2015)](https://deep-learning-study.tistory.com/681), paper [[pdf](https://arxiv.org/pdf/1503.03832.pdf)]
+
+## Model Compression
+- [Deep Compression(2016)](https://deep-learning-study.tistory.com/683), paper [[pdf](https://arxiv.org/abs/1510.00149)]
+
+## Activation Function
+- [Mish(2019)](https://deep-learning-study.tistory.com/636), paper [[pdf](https://arxiv.org/abs/1908.08681)]
+
+## Augmentation
+- [CutMix(2019)](https://deep-learning-study.tistory.com/633), paper [[pdf](https://arxiv.org/abs/1905.04899)]
+
+- [Learning Data Augmentation Strategies for Object Detection(2019](https://deep-learning-study.tistory.com/705), paper [[pdf](https://arxiv.org/pdf/1906.11172.pdf)]
+
+- [Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation(2020)](https://deep-learning-study.tistory.com/708), paper [[pdf](https://arxiv.org/abs/2012.07177)]
+
+## Style Transfer
+- PyTorch 구현 코드로 살펴보는 [A Neural Algorithm of Artistic Style(2016)](https://deep-learning-study.tistory.com/679), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/style_transfer/style_transfer(2015).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/680)], paper [[pdf](https://arxiv.org/abs/1508.06576)]
+
+## Regularization
+- [DropBlock(2018)](https://deep-learning-study.tistory.com/631), paper [[pdf](https://arxiv.org/abs/1810.12890)]
+
+## Normalization
+
+- [Batch Normalization(2015)](https://deep-learning-study.tistory.com/421)
+
+- [Group Normalization(2018)](https://deep-learning-study.tistory.com/726), paper [[pdf](https://arxiv.org/abs/1803.08494)]
+
+- [Cross iteration BN(2020)](https://deep-learning-study.tistory.com/635), paper [[pdf](https://arxiv.org/abs/2002.05712)]
+
+## Optimization
+
+- [An overview of gradient descent optimization algorithm(2017)](https://deep-learning-study.tistory.com/415)
+
+- [AdamW(2017)](https://deep-learning-study.tistory.com/750), paper [[pdf](https://arxiv.org/abs/1711.05101)]
+
+
 
 ## GAN
 - PyTorch 구현 코드로 살펴보는 [GAN(2014)](https://deep-learning-study.tistory.com/638), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/GAN/GAN(2014).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/639)], paper [[pdf](https://arxiv.org/pdf/1406.2661.pdf)]
@@ -1358,51 +1483,3 @@ arXiv 2023. [[Paper](https://arxiv.org/abs/2302.07400)]\
 
 ## Image-to-Image Translation
   
-## Active Learning
-- [Towards Reducing Labeling Cost in Deep Object Detection(2021)](https://deep-learning-study.tistory.com/732), paper [[pdf](https://arxiv.org/abs/2106.11921)]
-
-## Pose estimation
-- [Hourglass(2016)](https://deep-learning-study.tistory.com/617)
-
-## Long Tail
-- [Class-Balanced Loss(2019)](https://deep-learning-study.tistory.com/671), paper [[pdf](https://arxiv.org/pdf/1901.05555.pdf)]
-
-- [Seesaw Loss for Long-Tailed Instance Segmentation(2020)](https://deep-learning-study.tistory.com/902), paper [[pdf](https://arxiv.org/abs/2008.10032)]
-
-
-## Face Recognition
-- Pytorch 구현 코드로 살펴보는 [FaceNet(2015)](https://deep-learning-study.tistory.com/681), paper [[pdf](https://arxiv.org/pdf/1503.03832.pdf)]
-
-## Model Compression
-- [Deep Compression(2016)](https://deep-learning-study.tistory.com/683), paper [[pdf](https://arxiv.org/abs/1510.00149)]
-
-## Activation Function
-- [Mish(2019)](https://deep-learning-study.tistory.com/636), paper [[pdf](https://arxiv.org/abs/1908.08681)]
-
-## Augmentation
-- [CutMix(2019)](https://deep-learning-study.tistory.com/633), paper [[pdf](https://arxiv.org/abs/1905.04899)]
-
-- [Learning Data Augmentation Strategies for Object Detection(2019](https://deep-learning-study.tistory.com/705), paper [[pdf](https://arxiv.org/pdf/1906.11172.pdf)]
-
-- [Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation(2020)](https://deep-learning-study.tistory.com/708), paper [[pdf](https://arxiv.org/abs/2012.07177)]
-
-## Style Transfer
-- PyTorch 구현 코드로 살펴보는 [A Neural Algorithm of Artistic Style(2016)](https://deep-learning-study.tistory.com/679), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/style_transfer/style_transfer(2015).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/680)], paper [[pdf](https://arxiv.org/abs/1508.06576)]
-
-## Regularization
-- [DropBlock(2018)](https://deep-learning-study.tistory.com/631), paper [[pdf](https://arxiv.org/abs/1810.12890)]
-
-## Normalization
-
-- [Batch Normalization(2015)](https://deep-learning-study.tistory.com/421)
-
-- [Group Normalization(2018)](https://deep-learning-study.tistory.com/726), paper [[pdf](https://arxiv.org/abs/1803.08494)]
-
-- [Cross iteration BN(2020)](https://deep-learning-study.tistory.com/635), paper [[pdf](https://arxiv.org/abs/2002.05712)]
-
-## Optimization
-
-- [An overview of gradient descent optimization algorithm(2017)](https://deep-learning-study.tistory.com/415)
-
-- [AdamW(2017)](https://deep-learning-study.tistory.com/750), paper [[pdf](https://arxiv.org/abs/1711.05101)]
-
