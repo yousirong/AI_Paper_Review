@@ -26,6 +26,8 @@ AI 논문 정리
 - [3D Vision](#3d-vision)
 - [NLP](#nlp)
 - [GAN](#gan)
+- [Image generation(Non-GAN)](#non-gan)
+- [Text-guided Image Generation](#text-guided-image-generation)
 - [Diffusion Model](#diffusion-model)
 - [Diffusion Model based Anomaly Detection](#diffusion-model-based-anomaly-detection)
 - [Diffusion Resources](#diffusion-resources)
@@ -50,6 +52,10 @@ AI 논문 정리
   - [3D](#3d)
   - [수학기반향상](#수학기반향상)
   - [기타](#기타)
+- [Medical Imaging](#medical-imaging)
+  - [Diffusion-based Medical Image Generation](#diffusion-based-medical-image-generation)
+  - [Segmentation & Registration](#segmentation--registration)
+  - [Image-to-Image Translation](#image-to-image-translation)
 - [Active Learning](#active-learning)
 - [Pose estimation](#pose-estimation)
 - [Long Tail](#long-tail)
@@ -667,6 +673,12 @@ nlp
 
 - PyTorch 구현 코드로 살펴보는 [Pix2Pix(2016)](https://deep-learning-study.tistory.com/645), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/GAN/DCGAN(2015).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/643)], paper [[pdf](https://arxiv.org/abs/1611.07004)]
 
+## Image generation(Non-GAN)
+- [Taming Transformers for High-Resolution Image Synthesis(2021)], paper[[pdf](https://arxiv.org/pdf/2012.09841)]
+
+## Text-guided Image Generation
+- [VQGAN-CLIP: Open Domain Image Generation and Editing with Natural Language Guidance(2022)], paper[[pdf](https://arxiv.org/pdf/2204.08583)]
+
 ### Diffusion Model
 - PyTorch 구현 코드로 살펴보는 [Implementation of Denoising Diffusion Probabilistic Model in Pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch?tab=readme-ov-file), PyTorch Code [[Google Colab]()]
 
@@ -679,9 +691,6 @@ nlp
 - [Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection(2023)], paper [[pdf](https://openaccess.thecvf.com/content/ICCV2023/papers/Flaborea_Multimodal_Motion_Conditioned_Diffusion_Model_for_Skeleton-based_Video_Anomaly_Detection_ICCV_2023_paper.pdf)]
 
 
-
-    
-  
 # Diffusion Resources
 ## Introductory Posts
 
@@ -726,7 +735,7 @@ Survey.
 [[paper](https://arxiv.org/abs/2209.00796)] 
 [[Github](https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy?tab=readme-ov-file)] \
 6 Feb 2024 \
-교수님 추천 논문
+diffusion Survey.
 
 **Deep Unsupervised Learning using Nonequilibrium Thermodynamics** \
 *Jascha Sohl-Dickstein, Eric A. Weiss, Niru Maheswaranathan, Surya Ganguli* \
@@ -774,7 +783,7 @@ Score-based 와 DDPM을 SDE로 묶어낸 논문. 매우 잘 써진 논문이라 
 *Diederik P. Kingma, Tim Salimans, Ben Poole, Jonathan Ho* \
 NeurIPS 2021. [[Paper](https://arxiv.org/abs/2107.00630)] [[Github](https://github.com/revsic/jax-variational-diffwave)] \
 1 Jul 2021 \
-필수라고 적어놨지만 필자도 아직 안읽었습니다.. SNR을 정의 내린 논문. 그리고 수식적으로 잘 정리된 논문. 조만간 읽고 업데이트 하겠습니다.
+필SNR을 정의 내린 논문. 그리고 수식적으로 잘 정리된 논문. 
 
 **Elucidating the Design Space of Diffusion-Based Generative Models** \
 *Tero Karras, Miika Aittala, Timo Aila, Samuli Laine* \
@@ -789,8 +798,6 @@ NeurIPS Workshop 2021. [[Paper](https://arxiv.org/abs/2207.12598)] \
 GAN으로 치면 condition GAN. 외부에서 classifier로 guidance를 주는 대신, UNet에 바로 컨디션을 꽂아줌. 이 때 수식을 classifier guidance랑 같아지도록 전개, 잘 됨. 현재 잘 되는 대부분의 모델들은 free guidance 방식으로 학습됨.
 
 ## Personalized
-
-따로 모을 필요가 느껴져서 목록을 새로 만들었습니다. 아직 모아놓지 않았습니다. 곧 모아볼게요.
 
 **InstantBooth: Personalized Text-to-Image Generation without Test-Time Finetuning**\
 *Jing Shi, Wei Xiong, Zhe Lin, Hyun Joon Jung*\
@@ -878,7 +885,7 @@ arxiv Submitted on 8 Dec 2022\ preprint [[Paper](https://arxiv.org/abs/2212.0448
 arXiv 2023. [[Paper](https://arxiv.org/abs/2301.10972)]\
 high resolution 에서는 같은 SNR 에서도 이미지가 덜 망가지는 것으로부터, resolution 별 새로운 noise scheduling 을 제안함. \
 이미지가 클수록 정보가 살아남는 것으로부터 착안하여, signal 을 낮춰주는 $xt=\sqrt{\alpha} b x_0 + \sqrt{1 - \alpha} \epsilon 을 제안.\
-+) UNet backbone 이 아닙니다.
++) UNet backbone이 아닙니다.
 
 **eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers** \
 *Yogesh Balaji, Seungjun Nah, Xun Huang, Arash Vahdat, Jiaming Song, Karsten Kreis, Miika Aittala, Timo Aila, Samuli Laine, Bryan Catanzaro, Tero Karras, Ming-Yu Liu*\
@@ -935,7 +942,7 @@ Normalizing flow의 invertible한 성질을 적용하여, data adatible 한 nonl
 arXiv 2023. [[Paper](https://arxiv.org/abs/2301.10972)]\
 high resolution 에서는 같은 SNR 에서도 이미지가 덜 망가지는 것으로부터, resolution 별 새로운 noise scheduling 을 제안함. \
 이미지가 클수록 정보가 살아남는 것으로부터 착안하여, signal 을 낮춰주는 $xt=\sqrt{\alpha} b x_0 + \sqrt{1 - \alpha} \epsilon 을 제안.\
-+) UNet backbone 이 아닙니다.
++) UNet backbone이 아닙니다.
   
 ## Diffusion Transformer
 
@@ -943,7 +950,7 @@ high resolution 에서는 같은 SNR 에서도 이미지가 덜 망가지는 것
 *William Peebles, Saining Xie* \
 arXiv 2022. [[Paper](https://arxiv.org/abs/2212.09748)] [[Project page](https://www.wpeebles.com/DiT)] [[Git](https://github.com/facebookresearch/DiT)]\
 [Submitted on 19 Dec 2022] \
-트랜스포머를 사용해서 이미지넷에서 SOTA. 기본적으로 VAE의 latent 상에서의 Diffusion이며, t랑 class를 concat 해서 mlp 하나 태우고, adaLN 을 적용시킴. 약간 LDM을 transformer로 구현한 느낌. 실험 좋고 내용 간단한데 굳이 열심히 읽어볼 필요는 없는 논문.
+트랜스포머를 사용해서 이미지넷에서 SOTA. 기본적으로 VAE의 latent 상에서의 Diffusion이며, t랑 class를 concat 해서 mlp 하나 태우고, adaLN 을 적용시킴. 약간 LDM을 transformer로 구현한 느낌.
 
 **Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models** \
 *Yixin Liu Kai Zhang Yuan Li Zhiling Yan Chujie Gao
@@ -952,7 +959,6 @@ Jianfeng Gao Lifang He1 Lichao Sun
 Lehigh University Microsoft Research* \
 Note: This is not an official technical report from OpenAI
 arxiv 2024 [[Paper](https://arxiv.org/pdf/2402.17177)] [[Git](https://github.com/lichao-sun/SoraReview)] \
-
 
 OpenAI가 2024년 2월 15일, 텍스트를 영상으로 만들어주는(Text-to-Video) 생성형 AI인 Sora를 발표한 이후 국내외를 막론하고 방송·영상 업계에서는 하나같이 기대감과 함께 위기감을 표하고 있다. 그리고 곧이어 이 서비스를 분석하고 전망한 전문가들의 칼럼이나 학술대회 발표가 이어지고 있다. OpenAI는 Sora를 공개하면서 이 서비스의 기술적 세부 사항에 대한 공식 연구 논문을 
 발표하지는 않았지만, 활용된 기술에 대한 개요와 일부 정성적 결과를 다룬 기술 문서(technical report) ‘Video generation models as world simulators’를 웹사이트에 발표했다1). 그리고 Sora 서비스를 일부 시각예술가, 디자이너, 영화제작 전문가들에게만 제한적으로 공개하여 서비스의 완성도를 테스트 중이고 연말에는 이 서비스를 대중에까지 이용할 수 있도록 하겠다고 발표했다. 그동안 OpenAI는 Sora 서비스에서 발생할 수 있는 부정확한 정보(misinformation), 혐오 콘텐츠(hateful content), 편향(bias)을 테스트할 레드 팀(red team)2)을 운영할 것이라고 밝혔다(OpenAI, 2024). 
@@ -995,7 +1001,7 @@ GAN으로 특정 timestep의 이미지를 생성하는 방법으로 샘플링도
 *Giannis Daras, Mauricio Delbracio, Hossein Talebi, Alexandros G. Dimakis, Peyman Milanfar* \
 arXiv 2022. [[Paper](https://arxiv.org/abs/2209.05442)] \
 12 Sep 2022 \
-blur써 Sota 
+blur써서 Sota 
 
 ## Image space guidance sampling
 
@@ -1003,7 +1009,7 @@ blur써 Sota
 *Jooyoung Choi, Sungwon Kim, Yonghyun Jeong, Youngjune Gwon, Sungroh Yoon* \
 ICCV 2021 (Oral). [[Paper](https://arxiv.org/abs/2108.02938)] [[Github](https://github.com/jychoi118/ilvr_adm)] \
 6 Aug 2021 \
-이미지를 Low-pass filter 통과시킨 후 합쳐서 원하는 이미지랑 비슷한 이미지 생성
+이미지를 Low-pass filter 통과시킨 후 합쳐서 원하는 이미지랑 비슷한 이미지 생성.
 
 **RePaint: Inpainting using Denoising Diffusion Probabilistic Models** \
 *Andreas Lugmayr, Martin Danelljan, Andres Romero, Fisher Yu, Radu Timofte, Luc Van Gool* \
@@ -1049,7 +1055,7 @@ Off-the-shelf model들의 사용으로 feature를 뽑아내고 클러스터링�
 *Yong-Hyun Park, Mingi Kwon, Junghyo Jo, Youngjung Uh*\
 arXiv 2023. [[Paper](https://arxiv.org/abs/2302.12469)]\
 [Submitted on 24 Feb 2023]\
-UNet의 bottleneck이 local하게 linear하다는 성질을 사용하여 리만기하학을 사용한 unsupervised editing direction을 찾는 방법을 제안한 논문이다. 갓용현님의 첫번째 논문이며 나름 좋은 논문이다. 읽어주세염! 참고로, Diffusion models editing에서 보지 못했던 pose 변화 editing을 보여주고 있다. Stable diffusion에서도 editing이 된다.
+UNet의 bottleneck이 local하게 linear하다는 성질을 사용하여 리만기하학을 사용한 unsupervised editing direction을 찾는 방법을 제안한 논문이다. 참고로, Diffusion models editing에서 보지 못했던 pose 변화 editing을 보여주고 있다. Stable diffusion에서도 editing이 된다.
 
 
 **Zero-Shot Image Restoration Using Denoising Diffusion Null-Space Model**\
@@ -1123,14 +1129,14 @@ arXiv 2022. [[Paper](https://arxiv.org/abs/2211.12446)]\
 DDIM inversion 과 Normalizing flow 에서 자주 사용되는 Affine coupling layer 의 수식이 동일하다는 점에서 착안하여, 완벽하게 inversion 되는 process 를 제안. \
 text-conditional 일때나 guidance scale 이 클때도 reconstruction 성능이 좋습니다.
 
-  **Boundary Guided Mixing Trajectory for Semantic Control with Diffusion Models**\
-  *Ye Zhu, Yu Wu, Zhiwei Deng, Olga Russakovsky, Yan Yan*\
-  arXiv 2023. [[Paper](https://arxiv.org/abs/2302.08357)]\
-  [Submitted on 16 Feb 2023]\
+**Boundary Guided Mixing Trajectory for Semantic Control with Diffusion Models**\
+*Ye Zhu, Yu Wu, Zhiwei Deng, Olga Russakovsky, Yan Yan*\
+arXiv 2023. [[Paper](https://arxiv.org/abs/2302.08357)]\
+[Submitted on 16 Feb 2023]\
   Asyrp을 사용하면 (Diffusion models already have a semantic latent space) 생기는 문제를 inversion 이미지와 generated 이미지의 xT 분포를 가지고 분석함. inversion한 이미지가 가우시안 분포 껍질 안쪽에 있다고 말하고, 이걸 맞춰주는 방식을 제안함. - 제대로 안읽어서 추후 업데이트 예정.
   
   
-  **MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing** \
+**MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing** \
 * Mingdeng Cao, Xintao Wang, Zhongang Qi, Ying Shan, Xiaohu Qie, Yinqiang Zheng *\
 arXiv 2023. [[Paper](https://arxiv.org/abs/2304.08465)]\
 [Submitted on 17 Apr 2023] \
@@ -1173,15 +1179,13 @@ arXiv 2023. [[Paper](https://arxiv.org/abs/2303.09522)]\
 *Senmao Li, Joost van de Weijer, Taihang Hu, Fahad Shahbaz Khan, Qibin Hou, Yaxing Wang, Jian Yang*\
 arXiv 2023. [[Paper](https://arxiv.org/abs/2303.15649)]\
 [Submitted on 28 Mar 2023]\
-Prompt2Prompt, texture inversion 아류인데, loss로 K와 Q가 같아지도록 loss를 추가함. 뭔가 내용이 더 있는 논문이었는데 기억이 잘...
-
+Prompt2Prompt, texture inversion 아류인데, loss로 K와 Q가 같아지도록 loss를 추가함. 
 
 ## Fast Sampling
-
 **Progressive Distillation for Fast Sampling of Diffusion Models**\
-  *Tim Salimans, Jonathan Ho*\
-  arXiv 2022. [[Paper](https://arxiv.org/abs/2202.00512)] \
-  Faster sampling 을 목표로, denoising 2 step 을 예측하는 student 모델을 학습시킨다. 이때, $\epsilon$-prediction 을 하게 될 경우 기존과는 달리 numerical error 에 대한 correction 이 이뤄질 수 없어서 v-prediction 이라는 새로운 parameterization 을 제안함. (v-prediction 은 생각보다 자주 쓰이니 Appendix D 는 보기를 추천)
+*Tim Salimans, Jonathan Ho*\
+arXiv 2022. [[Paper](https://arxiv.org/abs/2202.00512)] \
+Faster sampling 을 목표로, denoising 2 step 을 예측하는 student 모델을 학습시킨다. 이때, $\epsilon$-prediction 을 하게 될 경우 기존과는 달리 numerical error 에 대한 correction 이 이뤄질 수 없어서 v-prediction 이라는 새로운 parameterization 을 제안함. (v-prediction 은 생각보다 자주 쓰이니 Appendix D 는 보기를 추천)
   
 **On distillation of guided diffusion models** \
 *Chenlin Meng, Robin Rombach, Ruiqi Gao, Diederik P. Kingma, Stefano Ermon, Jonathan Ho, Tim Salimans* \
@@ -1224,16 +1228,16 @@ arXiv 2022. [[Paper](https://arxiv.org/abs/2204.03458)] \
 Diffusion을 이용한 Video generation을 처음으로 한 논문, Video의 길이를 늘리고, quality를 높이는 것에 대한 방법제시.
 
 **Structure and Content-Guided Video Synthesis with Diffusion Models**\
-  *Patrick Esser, Johnathan Chiu, Parmida Atighehchian, Jonathan Granskog, Anastasis Germanidis*\
-  arXiv 2023. [[Paper](https://arxiv.org/abs/2302.03011)] [[Project Page](https://research.runwayml.com/gen1)]\
-  [Submitted on 6 Feb 2023] \
-  비디오2비디오 translation을 할 때, 이미 또는 텍스트로 가이드를 주는 논문. 비디오의 time에 따른 Spatio-temporal을 위해 temporal convolution/attention 네트워크를 삽입하였고, structure를 유지시키기 위해 depth estimation 을 사용하였음. 또한 훈련때 사용한 비디오를 CLIP image encoder에 태워, 기존 텍스트 대신 image로 condition을 줄 수 있도록 훈련함. 
+*Patrick Esser, Johnathan Chiu, Parmida Atighehchian, Jonathan Granskog, Anastasis Germanidis*\
+arXiv 2023. [[Paper](https://arxiv.org/abs/2302.03011)] [[Project Page](https://research.runwayml.com/gen1)]\
+[Submitted on 6 Feb 2023] \
+비디오2비디오 translation을 할 때, 이미 또는 텍스트로 가이드를 주는 논문. 비디오의 time에 따른 Spatio-temporal을 위해 temporal convolution/attention 네트워크를 삽입하였고, structure를 유지시키기 위해 depth estimation 을 사용하였음. 또한 훈련때 사용한 비디오를 CLIP image encoder에 태워, 기존 텍스트 대신 image로 condition을 줄 수 있도록 훈련함. 
   
 **MagicVideo: Efficient Video Generation With Latent Diffusion Models**\
-  *Daquan Zhou, Weimin Wang, Hanshu Yan, Weiwei Lv, Yizhe Zhu, Jiashi Feng*\
-  arXiv 2023. [[Paper](https://arxiv.org/abs/2211.11018)] [[Project Page](https://magicvideo.github.io/#)]\
-  [Submitted on 20 Nov 2022]\
-  비디오를 가지고 훈련시키는 데, adaptor 라는 개념을 추가하여, frame 간의 관계 정보를 공유하도록 한다. 이 때 Directed Temporal Attention 을 사용해서 - Masked Self attention과 거의 동일한 개념.- 뒤쪽 frame에게만 영향을 끼치도록 만듬. 나쁘지 않은 논문.
+*Daquan Zhou, Weimin Wang, Hanshu Yan, Weiwei Lv, Yizhe Zhu, Jiashi Feng*\
+arXiv 2023. [[Paper](https://arxiv.org/abs/2211.11018)] [[Project Page](https://magicvideo.github.io/#)]\
+[Submitted on 20 Nov 2022]\
+비디오를 가지고 훈련시키는 데, adaptor 라는 개념을 추가하여, frame 간의 관계 정보를 공유하도록 한다. 이 때 Directed Temporal Attention 을 사용해서 - Masked Self attention과 거의 동일한 개념.- 뒤쪽 frame에게만 영향을 끼치도록 만듬. 나쁘지 않은 논문.
   
 **Latent-Shift: Latent Diffusion with Temporal Shift for Efficient Text-to-Video Generation **
 *Jie An1;2* Songyang Zhang1;2* Harry Yang2 Sonal Gupta2 Jia-Bin Huang2;3 Jiebo Luo1;2 Xi Yin2*
@@ -1280,9 +1284,9 @@ Diffusion 으로 3d radiacne field generation한 논문. 이전에 DreamFusion�
 
 **On Calibrating Diffusion Probabilistic Models**\
 *Tianyu Pang, Cheng Lu, Chao Du, Min Lin, Shuicheng Yan, Zhijie Deng*\
-  arXiv 2023. [[Paper](https://arxiv.org/abs/2302.10688)] [[Code](https://github.com/thudzj/Calibrated-DPMs)]\
-  [Submitted on 21 Feb 2023]\
-  각 스텝에서 예측된 스코어의 합이 0이 되어야 한다고 주장. 이를 위해서 Theorem 1을 제안하는데, ∀0≤s<t≤T 일때 s에서 구한 스코어와 t에서 구한 스코어가 같다는 말을 한다. -(xs|xt)일때- 용현님의 생각은 이 Theorem 1이 DDIM이 왜 잘 동작하는지 보여주고 있으며, gDDIM에서 주장하는 바와도 연관된다고 평가하심. 이를 확장하여 x0의 스코어의 평균이 0이니 xt의 스코어의 평균이 0이어야 한다는 주장을 한다. (Eq.13) 이건 공감 못하셨다. 이를 만족시킬 수 있는 예타t를 스코어에 넣는 방법을 제안했고, 이를 통해 DPM-Solver의 성능을 모든 NFE에서 올렸다.
+arXiv 2023. [[Paper](https://arxiv.org/abs/2302.10688)] [[Code](https://github.com/thudzj/Calibrated-DPMs)]\
+[Submitted on 21 Feb 2023]\
+각 스텝에서 예측된 스코어의 합이 0이 되어야 한다고 주장. 이를 위해서 Theorem 1을 제안하는데, ∀0≤s<t≤T 일때 s에서 구한 스코어와 t에서 구한 스코어가 같다는 말을 한다. -(xs|xt)일때- 용현님의 생각은 이 Theorem 1이 DDIM이 왜 잘 동작하는지 보여주고 있으며, gDDIM에서 주장하는 바와도 연관된다고 평가하심. 이를 확장하여 x0의 스코어의 평균이 0이니 xt의 스코어의 평균이 0이어야 한다는 주장을 한다. (Eq.13) 이건 공감 못하셨다. 이를 만족시킬 수 있는 예타t를 스코어에 넣는 방법을 제안했고, 이를 통해 DPM-Solver의 성능을 모든 NFE에서 올렸다.
 
 **Improving Score-based Diffusion Models by Enforcing the Underlying Score Fokker-Planck Equation**\
 *Chieh-Hsin Lai, Yuhta Takida, Naoki Murata, Toshimitsu Uesaka, Yuki Mitsufuji, Stefano Ermon*\
@@ -1320,21 +1324,22 @@ arXiv 2022. [[Paper](https://arxiv.org/abs/2209.14916)][[Project page](https://g
 *Ye Yuan, Jiaming Song, Umar Iqbal, Arash Vahdat, Jan Kautz* \
 arXiv 2022. [[Paper](https://arxiv.org/abs/2212.02500)] \
 [Submitted on 5 Dec 2022] \
-Motion Diffusion Model에서 발이 떨어지는 문제를 해결하기 위해 강화학습을 사용함. 자세한건 패스..
+Motion Diffusion Model에서 발이 떨어지는 문제를 해결하기 위해 강화학습을 사용함.
 
 **Score-based Diffusion Models in Function Space**\
 *Jae Hyun Lim*, Nikola B. Kovachki*, Ricardo Baptista*, Christopher Beckham, Kamyar Azizzadenesheli, Jean Kossaifi, Vikram Voleti, Jiaming Song, Karsten Kreis, Jan Kautz, Christopher Pal, Arash Vahdat, Anima Anandkumar*\
 arXiv 2023. [[Paper](https://arxiv.org/abs/2302.07400)]\
 [Submitted on 14 Feb 2023]\
-꽤나 어려운 논문. 일단 간단히 말하자면 어떤 function을 생성하는 논문임. infinite dimension에서 Lebesgue measure가 불가능 하기 때문에 Radon–Nikodym Theorem을 통해 probability measure를 구함. (정확하지 않은 표현인데.. 요약이 힘드네요. 4번식 밑에 줄이 정확한 표현) 이 때 u(뮤)는 Cameron-Martin space라고 여기고 Feldman–Hájek Theorem을 적용해서 8번 식을 구함. 적다보니 요약이 불가한 논문이란 것을 깨달았고, 본인도 읽은지 몇 주 됐다고 기억이 가물가물함. 추후 업데이트 해보겠음.
+꽤나 어려운 논문. 일단 간단히 말하자면 어떤 function을 생성하는 논문임. infinite dimension에서 Lebesgue measure가 불가능 하기 때문에 Radon–Nikodym Theorem을 통해 probability measure를 구함. (정확하지 않은 표현인데.. 요약이 힘드네요. 4번식 밑에 줄이 정확한 표현) 이 때 u(뮤)는 Cameron-Martin space라고 여기고 Feldman–Hájek Theorem을 적용해서 8번 식을 구함.
 
 
+# Medical Imaging
+## Diffusion-based Medical Image Generation
+- [Fast-DDPM: Fast Denoising Diffusion Probabilistic Models for Medical Image-to-Image Generation(2024)], paper[[pdf](https://arxiv.org/pdf/2405.14802)]
 
+## Segmentation & Registration
 
-
-
-
-
+## Image-to-Image Translation
   
 ## Active Learning
 - [Towards Reducing Labeling Cost in Deep Object Detection(2021)](https://deep-learning-study.tistory.com/732), paper [[pdf](https://arxiv.org/abs/2106.11921)]
