@@ -26,6 +26,7 @@ AI 논문 정리
 - [3D Vision](#3d-vision)
 - [NLP](#nlp)
 - [GAN](#gan)
+  - [Conditional GAN](#conditional-gan)
 - [Image generation(Non-GAN)](#non-gan)
 - [Text-guided Image Generation](#text-guided-image-generation)
 - [Diffusion Model](#diffusion-model)
@@ -52,6 +53,10 @@ AI 논문 정리
   - [3D](#3d)
   - [수학기반향상](#수학기반향상)
   - [기타](#기타)
+- [Image Inpainting](#image-inpainting)
+  - [Non-GAN-based Inpainting](#non-gan-based-inpainting)
+  - [GAN-based Inpainting](#gan-based-inpainting)
+  - [Diffusion-based Inpainting](#diffusion-based-inpainting)
 - [Medical Imaging](#medical-imaging)
   - [Diffusion-based Medical Image Generation](#diffusion-based-medical-image-generation)
   - [Segmentation & Registration](#segmentation--registration)
@@ -662,7 +667,7 @@ nlp
 
 - [ROFORMER: ENHANCED TRANSFORMER WITH ROTARY POSITION EMBEDDING(2023)] paper [[pdf](https://arxiv.org/pdf/2104.09864)]
 
-### GAN
+## GAN
 - PyTorch 구현 코드로 살펴보는 [GAN(2014)](https://deep-learning-study.tistory.com/638), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/GAN/GAN(2014).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/639)], paper [[pdf](https://arxiv.org/pdf/1406.2661.pdf)]
 
 - PyTorch 구현 코드로 살펴보는 [CGAN(2014)](https://deep-learning-study.tistory.com/640), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/GAN/CGAN(2014).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/641)], paper [[pdf](https://arxiv.org/abs/1411.1784)]
@@ -675,6 +680,9 @@ nlp
 
 ## Image generation(Non-GAN)
 - [Taming Transformers for High-Resolution Image Synthesis(2021)], paper[[pdf](https://arxiv.org/pdf/2012.09841)]
+
+### Conditional GAN
+- Pix2Pix[Image-to-Image Translation with Conditional Adversarial Networks(2017)], paper[[pdf](https://arxiv.org/pdf/1611.07004)]
 
 ## Text-guided Image Generation
 - [VQGAN-CLIP: Open Domain Image Generation and Editing with Natural Language Guidance(2022)], paper[[pdf](https://arxiv.org/pdf/2204.08583)]
@@ -1121,7 +1129,7 @@ Stable Diffusion의 4th layer의 featuremap과 4-11th laeyr의 self attention Q,
 *Mingi Kwon, Jaeseok Jeong, Youngjung Uh* \
 ICLR 2023 Spotlight / preprint [[Paper](https://arxiv.org/abs/2210.10960)] [[Project page](https://kwonminki.github.io/Asyrp/)] \
 [Submitted on 20 Oct 2022] \
-DDIM의 샘플링 공식 중 predicted x0 부분만 바꿔주면 U-Net의 bottle-neck 부분을 semantic latent space로 쓸 수 있음을 보여준 논문. Asyrp을 제안함. 잘됩니당 좋은 논문입니당 읽어주세요.
+DDIM의 샘플링 공식 중 predicted x0 부분만 바꿔주면 U-Net의 bottle-neck 부분을 semantic latent space로 쓸 수 있음을 보여준 논문. Asyrp을 제안함. 
 
 **EDICT: Exact Diffusion Inversion via Coupled Transformations** \
 *Bram Wallace, Akash Gokul, Nikhil Naik* \
@@ -1129,11 +1137,16 @@ arXiv 2022. [[Paper](https://arxiv.org/abs/2211.12446)]\
 DDIM inversion 과 Normalizing flow 에서 자주 사용되는 Affine coupling layer 의 수식이 동일하다는 점에서 착안하여, 완벽하게 inversion 되는 process 를 제안. \
 text-conditional 일때나 guidance scale 이 클때도 reconstruction 성능이 좋습니다.
 
+**LDEdit: Towards Generalized Text GuidedImage Manipulation via Latent Diffusion Models** \
+*Paramanand Chandramouli, Kanchana Vaishnavi Gandikota* \
+arXiv 2022. [[paper](https://arxiv.org/pdf/2210.02249)] \
+텍스트 기반의 이미지 편집(image manipulation)을 위해 Latent Diffusion Model (LDM)을 사용하는 논문.
+
 **Boundary Guided Mixing Trajectory for Semantic Control with Diffusion Models**\
 *Ye Zhu, Yu Wu, Zhiwei Deng, Olga Russakovsky, Yan Yan*\
 arXiv 2023. [[Paper](https://arxiv.org/abs/2302.08357)]\
 [Submitted on 16 Feb 2023]\
-  Asyrp을 사용하면 (Diffusion models already have a semantic latent space) 생기는 문제를 inversion 이미지와 generated 이미지의 xT 분포를 가지고 분석함. inversion한 이미지가 가우시안 분포 껍질 안쪽에 있다고 말하고, 이걸 맞춰주는 방식을 제안함. - 제대로 안읽어서 추후 업데이트 예정.
+  Asyrp을 사용하면 (Diffusion models already have a semantic latent space) 생기는 문제를 inversion 이미지와 generated 이미지의 xT 분포를 가지고 분석함. inversion한 이미지가 가우시안 분포 껍질 안쪽에 있다고 말하고, 이걸 맞춰주는 방식을 제안함.
   
   
 **MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing** \
@@ -1255,7 +1268,7 @@ arXiv 2023. [[Paper](https://arxiv.org/abs/2212.11565)][[Project page](https://t
 *Shaoteng Liu1 Yuechen Zhang1 Wenbo Li1 Zhe Lin3 Jiaya Jia1;2*
 arXiv 2023. [[Paper](https://video-p2p.github.io/)] [[Project page](https://video-p2p.github.io/)]
 [Submitted on 8 Mar 2023]
-Input video 한개에 T2I->T2V fine-tunning(Tune-A-Video와 비슷한 방식), T2I -> T2V 만들때 self-attention을 처음 프레임만을 key와 value만드는데 쓰도록 바꿈 (Frame attention), decoupled-guidance attention으로 background 안바뀌고 foreground object만 editing되도록함(Mask생성)
+Input video 한개에 T2I->T2V fine-tunning(Tune-A-Video와 비슷한 방식), T2I -> T2V 만들때 self-attention을 처음 프레임만을 key와 value만드는데 쓰도록 바꿈 (Frame attention), decoupled-guidance attention으로 background 안바뀌고 foreground object만 editing되도록함(Mask생성).
 
 **Pix2Video: Video Editing using Image Diffusion**
 *Duygu Ceylan1* Chun-Hao P. Huang1* Niloy J. Mitra1,2*
@@ -1309,7 +1322,7 @@ score를 svd 해서 분석해본 결과 재밌게도 eigenvalue가 낮은 친구
 *Jae Hyun Lim*, Nikola B. Kovachki*, Ricardo Baptista*, Christopher Beckham, Kamyar Azizzadenesheli, Jean Kossaifi, Vikram Voleti, Jiaming Song, Karsten Kreis, Jan Kautz, Christopher Pal, Arash Vahdat, Anima Anandkumar*\
 arXiv 2023. [[Paper](https://arxiv.org/abs/2302.07400)]\
 [Submitted on 14 Feb 2023]\
-꽤나 어려운 논문. 일단 간단히 말하자면 어떤 function을 생성하는 논문임. infinite dimension에서 Lebesgue measure가 불가능 하기 때문에 Radon–Nikodym Theorem을 통해 probability measure를 구함. (정확하지 않은 표현인데.. 요약이 힘드네요. 4번식 밑에 줄이 정확한 표현) 이 때 u(뮤)는 Cameron-Martin space라고 여기고 Feldman–Hájek Theorem을 적용해서 8번 식을 구함. 적다보니 요약이 불가한 논문이란 것을 깨달았고, 본인도 읽은지 몇 주 됐다고 기억이 가물가물함. 추후 업데이트 해보겠음.
+꽤나 어려운 논문. 일단 간단히 말하자면 어떤 function을 생성하는 논문임. infinite dimension에서 Lebesgue measure가 불가능 하기 때문에 Radon–Nikodym Theorem을 통해 probability measure를 구함. (정확하지 않은 표현인데.. 요약이 힘드네요. 4번식 밑에 줄이 정확한 표현) 이 때 u(뮤)는 Cameron-Martin space라고 여기고 Feldman–Hájek Theorem을 적용해서 8번 식을 구함. 
 
 
 ## 기타
@@ -1330,7 +1343,11 @@ Motion Diffusion Model에서 발이 떨어지는 문제를 해결하기 위해 �
 *Jae Hyun Lim*, Nikola B. Kovachki*, Ricardo Baptista*, Christopher Beckham, Kamyar Azizzadenesheli, Jean Kossaifi, Vikram Voleti, Jiaming Song, Karsten Kreis, Jan Kautz, Christopher Pal, Arash Vahdat, Anima Anandkumar*\
 arXiv 2023. [[Paper](https://arxiv.org/abs/2302.07400)]\
 [Submitted on 14 Feb 2023]\
-꽤나 어려운 논문. 일단 간단히 말하자면 어떤 function을 생성하는 논문임. infinite dimension에서 Lebesgue measure가 불가능 하기 때문에 Radon–Nikodym Theorem을 통해 probability measure를 구함. (정확하지 않은 표현인데.. 요약이 힘드네요. 4번식 밑에 줄이 정확한 표현) 이 때 u(뮤)는 Cameron-Martin space라고 여기고 Feldman–Hájek Theorem을 적용해서 8번 식을 구함.
+꽤나 어려운 논문. 일단 간단히 말하자면 어떤 function을 생성하는 논문임. infinite dimension에서 Lebesgue measure가 불가능 하기 때문에 Radon–Nikodym Theorem을 통해 probability measure를 구함. (4번식 밑에 줄이 정확한 표현) 이 때 u(뮤)는 Cameron-Martin space라고 여기고 Feldman–Hájek Theorem을 적용해서 8번 식을 구함.
+
+# Image Inpainting
+## Non-GAN-based Inpainting
+- [LaMa[Resolution-robust Large Mask Inpainting with Fourier Convolutions(2022)], paper[[pdf](https://arxiv.org/pdf/2109.07161)]
 
 
 # Medical Imaging
