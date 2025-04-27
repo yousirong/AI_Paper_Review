@@ -19,7 +19,7 @@ AI 논문 정리
 - [Zero Shot Classification](#zero-shot-classification)
 - [Zero Shot Detection](#zero-shot-detection)
 - [Zero Shot Segmentation](#zero-shot-segmentation)
-- [Few-Shot, Meta Learning](#few-shotmeta-learning)
+- [Few Shot Meta Learning](#few-shot-meta-learning)
 - [Prompting and Vision-Language Model](#prompting-and-vision-language-model)
 - [Image Processing](#image-processing)
 - [3D Vision](#3d-vision)
@@ -39,7 +39,7 @@ AI 논문 정리
 # 생성모델
 - [GAN](#gan)
   - [Conditional GAN](#conditional-gan)
-- [Image generation(Non-GAN)](#non-gan)
+- [Image generation Non GAN](#image-generation-non-gan)
 - [Text-guided Image Generation](#text-guided-image-generation)
 - [Diffusion Model](#diffusion-model)
 - [Diffusion Model based Anomaly Detection](#diffusion-model-based-anomaly-detection)
@@ -48,7 +48,6 @@ AI 논문 정리
   - [Introductory Papers](#introductory-papers)
   - [Introductory Videos](#introductory-videos)
 - [Diffusion Papers](#diffusion-papers)
-  - [Diffusion Models A Comprehensive Survey of Methods and Applications](#diffusion-models-a-comprehensive-survey-of-methods-and-applications)
   - [Must-read papers](#must-read-papers)
   - [Personalized](#personalized)
   - [Stable diffusion freeze](#stable-diffusion-freeze)
@@ -465,7 +464,7 @@ AI 논문 정리
 - [VTN(2021)](https://deep-learning-study.tistory.com/850). paper [[pdf](https://arxiv.org/abs/2102.00719)]
 
 
-## Video Recognition - Two Stream CNNs
+## Video Recognition Two Stream CNNs
 - [TSN(2016)](https://github.com/open-mmlab/mmaction2/blob/main/configs/recognition/tsn/README.md), paper[[pdf](https://arxiv.org/abs/1608.00859)]
 
 - [STA-CNN: Convolutional Spatial-Temporal Attention Learning for Action Recognition](https://ieeexplore.ieee.org/abstract/document/9058999?casa_token=t5IrgS4Ik0cAAAAA:Zb0vp9DXrDPRGfB4C9T-3S9K65IA6KdO7s94Sf-ycEfd2p4iTvqpWsS-qh0UModvS7SkW_C9vg)
@@ -474,7 +473,7 @@ AI 논문 정리
 
 - [STA-TSN: Spatial-Temporal Attention Temporal Segment Network for action recognition in video](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265115)
 
-## Video Recognition - Frame-based Models 
+## Video Recognition Frame-based Models 
 
 - [TSM: Temporal Shift Module for Efficient Video Understanding(2018)](https://www.notion.so/Temporal-Shift-Module-TSM-80418b91bde04305837e08e430b8e2bd), paper [[pdf](https://arxiv.org/abs/1811.08383)]
 
@@ -484,7 +483,7 @@ AI 논문 정리
 
 
 
-## Video Recognition - Transformer
+## Video Recognition Transformer
 
 - [TimeSformer(2021)](https://deep-learning-study.tistory.com/848), paper [[pdf](https://arxiv.org/abs/2102.05095)], Youtube [[link](https://youtu.be/xSf40PZjTxQ)]
 
@@ -595,7 +594,7 @@ AI 논문 정리
 - [Open-Vocabulary Image Segmentation(2021)](https://deep-learning-study.tistory.com/942), paper [[pdf](https://arxiv.org/abs/2112.12143)]
 
 
-## Few-Shot, Meta Learning
+## Few Shot Meta Learning
 - [Matching Networks for One Shot Learning(2016)](https://deep-learning-study.tistory.com/941), paper [[pdf](https://arxiv.org/abs/1606.04080)]
 
 - [Learning to Compare: Relation Network for Few-Shot Learning(2017)](https://deep-learning-study.tistory.com/937), paper [[pdf](https://arxiv.org/abs/1711.06025)]
@@ -666,7 +665,7 @@ nlp
 
 - [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators(2020)](https://deep-learning-study.tistory.com/921), paper [[pdf](https://arxiv.org/abs/2003.10555)]
 
-- [ROFORMER: ENHANCED TRANSFORMER WITH ROTARY POSITION EMBEDDING(2023)] paper [[pdf](https://arxiv.org/pdf/2104.09864)]
+- ROFORMER: ENHANCED TRANSFORMER WITH ROTARY POSITION EMBEDDING(2023), paper [[pdf](https://arxiv.org/pdf/2104.09864)]
 
 ## Active Learning
 - [Towards Reducing Labeling Cost in Deep Object Detection(2021)](https://deep-learning-study.tistory.com/732), paper [[pdf](https://arxiv.org/abs/2106.11921)]
@@ -729,7 +728,7 @@ nlp
 
 - PyTorch 구현 코드로 살펴보는 [Pix2Pix(2016)](https://deep-learning-study.tistory.com/645), PyTorch Code [[Google Colab](https://github.com/Seonghoon-Yu/Paper_Review_and_Implementation_in_PyTorch/blob/master/GAN/DCGAN(2015).ipynb) / [Blog Posting](https://deep-learning-study.tistory.com/643)], paper [[pdf](https://arxiv.org/abs/1611.07004)]
 
-## Image generation(Non-GAN)
+## Image generation Non GAN
 - [Taming Transformers for High-Resolution Image Synthesis(2021)], paper[[pdf](https://arxiv.org/pdf/2012.09841)]
 
 ### Conditional GAN
@@ -785,7 +784,6 @@ Survey.
 
 
 # Diffusion Papers
-
 
 ## Must-read papers
 
@@ -1082,7 +1080,7 @@ ICLR 2022. [[Paper](https://arxiv.org/abs/2108.01073)] [[Project](https://sde-im
 2 Aug 2021 \
 stroke를 노이즈를 적당히 씌웠다가 샘플링하면 비슷한 색의 real한 이미지를 얻을 수 있음.
 
-## Classifier guidance sampling - diffusion tranformer 이해하기 위한 내용
+## Classifier guidance sampling
 
 **Blended Diffusion for Text-driven Editing of Natural Images** \
 *Omri Avrahami, Dani Lischinski, Ohad Fried* \
@@ -1399,6 +1397,10 @@ arXiv 2023. [[Paper](https://arxiv.org/abs/2302.07400)]\
 # Image Inpainting
 ## Non-GAN-based Inpainting
 - [LaMa[Resolution-robust Large Mask Inpainting with Fourier Convolutions(2022)], paper[[pdf](https://arxiv.org/pdf/2109.07161)]
+
+##
+
+##
 
 
 # Medical Imaging
